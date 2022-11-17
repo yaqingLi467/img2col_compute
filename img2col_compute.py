@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # 自定义 feature map大小，kernel大小为3
-out_c, n, in_c, h, w = 5, 1, 3, 5, 5  # 暂时先考虑正方形:13*13
+out_c, n, in_c, h, w = 5, 1, 3, 5, 5  # 暂时先考虑正方形:5*5
 im = torch.rand(n, in_c, h, w)
 kernel_data = torch.rand(out_c, in_c, 3, 3)  # 后两位可以根据实际的kernel_size修改
 kernel_size = kernel_data.shape[-1]  # 得到3，即kernel_size
